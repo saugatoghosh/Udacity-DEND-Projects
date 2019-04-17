@@ -1,3 +1,3 @@
 # Udacity-DEND-Projects
 
-**Projects related to Udacity Data Enginner Nanodegree""
+**Projects related to Udacity Data Engineer Nanodegree**
