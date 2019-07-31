@@ -2,7 +2,7 @@ from airflow.hooks.postgres_hook import PostgresHook
 from airflow.models import BaseOperator
 from airflow.utils.decorators import apply_defaults
 
-#Loads the fact table from staging tables
+#Custom operator for loading fact table from staging tables
 
 class LoadFactOperator(BaseOperator):
 
