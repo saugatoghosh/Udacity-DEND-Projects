@@ -2,7 +2,7 @@ from airflow.hooks.postgres_hook import PostgresHook
 from airflow.models import BaseOperator
 from airflow.utils.decorators import apply_defaults
 
-# Custom operator for loading dimension tables
+# Custom operator for loading dimension tables from staging tables
 
 class LoadDimensionOperator(BaseOperator):
 
