@@ -2,6 +2,8 @@ from airflow.hooks.postgres_hook import PostgresHook
 from airflow.models import BaseOperator
 from airflow.utils.decorators import apply_defaults
 
+#Custom operator for performing data quality check on dimension table
+
 class DataQualityOperator(BaseOperator):
 
     ui_color = '#89DA59'
@@ -25,6 +27,9 @@ class DataQualityOperator(BaseOperator):
         self.pkey_col = pkey_col
 
     def execute(self, context):
+        '''
+        Checks if the primary key column has any null value. If so throws an exception
+        '''
         redshift_hook = PostgresHook(self.redshift_conn_id)
         records = redshift_hook.get_records(f"SELECT COUNT(*) FROM {self.table} WHERE {self.pkey_col} IS NULL")   
         num_records = records[0][0]
