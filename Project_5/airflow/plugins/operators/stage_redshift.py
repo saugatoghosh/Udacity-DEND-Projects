@@ -3,6 +3,7 @@ from airflow.hooks.postgres_hook import PostgresHook
 from airflow.models import BaseOperator
 from airflow.utils.decorators import apply_defaults
 
+#Custom operator for staging song and log data to staging tables in redshift cluster
 class StageToRedshiftOperator(BaseOperator):
     ui_color = '#358140'
     #template_fields = ("s3_key",)
