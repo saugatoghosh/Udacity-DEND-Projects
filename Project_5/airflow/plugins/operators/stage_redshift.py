@@ -40,6 +40,9 @@ class StageToRedshiftOperator(BaseOperator):
         self.json = json
         
     def execute(self, context):
+        '''
+        Copies data from S3 bucket to redshift cluster
+        '''
         aws_hook = AwsHook(self.aws_credentials_id)
         credentials = aws_hook.get_credentials()
         redshift = PostgresHook(postgres_conn_id=self.redshift_conn_id)
