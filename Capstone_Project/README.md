@@ -18,3 +18,4 @@ The project follows the following steps:
 
 Please refer to the **Capstone Project.ipynb** file for details of the steps above. 
 
+A shareable link to the **'tables'** folder containing the written parquet files is provided [here](https://r766466c839826xjupyterlnnfq3jud.udacity-student-workspaces.com/lab/tree/tables)
